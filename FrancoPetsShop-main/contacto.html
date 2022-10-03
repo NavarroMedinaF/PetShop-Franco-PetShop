@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto | Pet-Shop</title>
+
+    <link rel="shortcut icon" href="./assets/img/logo-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="style.css">
+
+
+</html>
+
+<body class="aparecer">
+    <div id="app" >
+        {{cantidadTotalEnCarrito}}
+
+        {{verificarContador(productosEnOfertas)}}
+
+        <div class="utility-nav d-none d-md-block ">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-md-6">
+                        <p class="small"><i class="bx bx-envelope"></i> logo@example.com | <i class="bx bx-phone"></i>
+                            +54 9 11 3431-0411
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-6 text-right">
+                        <p class="small">Envío gratis en compras de mas de $2000 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <!--Nav-->
+
+            <nav class="navbar navbar-expand-md  main-menu" style="box-shadow:none">
+                <div class="container">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+                        <i class="bx bx-menu icon-single"></i>
+                    </button>
+
+                    <a class="navbar-brand" href="#">
+                        <img class="logo" src="./assets/img/logo" alt="">
+                    </a>
+
+                    <ul class="navbar-nav d-flex flex-row navbar-nav ml-auto d-md-none align-items-center ">
+                        <li>
+                            <img class="dog-cat" :src=" CatDog.imagen" healt="" @click="estiloCatDog()">
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="btn btn-link text-decoration-none" href="carrito.html"><i
+                                    class="bx bxs-cart icon-single"></i>
+                                <span class="badge badge-danger">{{cantTotalCarro}}</span></a>
+
+                        </li>
+                    </ul>
+
+                    <div class="collapse navbar-collapse">
+                        <div class="form-inline my-2 my-lg-0 mx-auto">
+                            <nav class="navbar navbar-expand-md sub-menu">
+                                <div class="container">
+                                    <div class="collapse navbar-collapse" id="navbar">
+                                        <ul class="navbar-nav mx-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./index.html">Inicio <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./farmacia.html">Farmacia</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./jugueteria.html">Jugueteria</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#">Contacto</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <ul class="navbar-nav">
+                            <div class="d-flex align-items-center">
+                                <img class="dog-cat" :src="CatDog.imagen" healt="" @click="estiloCatDog()">
+                            </div>
+                            <li class="nav-item">
+
+                                <a class="btn btn-link text-decoration-none" href="carrito.html"><i
+                                        class="bx bxs-cart icon-single"></i>
+                                    <span class="badge badge-danger">{{cantTotalCarro}}</span></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-2 text-left">
+                                <button type="button" id="sidebarCollapseX" class="btn btn-link">
+                                    <i class="bx bx-x icon-single cruz"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components links">
+                    <li>
+                        <a class="text-decoration-none" href="./index.html"><i class="bx bx-home mr-3"></i>Inicio</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="./farmacia.html"><i
+                                class="fa-solid fa-stethoscope"></i></i>
+                            Farmacia</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="./jugueteria.html"><i class="fa-solid fa-futbol"></i>
+                            Jugeteria</a>
+                    </li>
+                    <li class="active">
+                        <a class="text-decoration-none" href="#"><i class="fa-solid fa-comment"></i> Contacto</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <section class="container_banner contacto_banner">
+
+            <div class="container_banner_text">
+                <h1>Contacto</h1>
+            </div>
+
+        </section>
+
+        <section class="contact-page-sec section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-map-marked"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h2>Direccion</h2>
+                                    <span>Rio de Janeiro 300, Caballito</span>
+                                    <span>Buenos Aires , Argentina</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h2>Mail</h2>
+                                    <span>logo@example.com</span>
+                                    <span>logo@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <h2>Horarios</h2>
+                                    <span>Lunes - Viernes 9:00 am - 4.00 pm</span>
+                                    <span>Sabados - Feriados 10.00 pm - 4.00 pm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="contact-page-form" method="post">
+                            <h2>Dejanos un mensaje</h2>
+                            <form action="contact-mail.php" method="post">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="single-input-field">
+                                            <input type="text" placeholder="Nombre" name="nombre" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="single-input-field">
+                                            <input type="email" placeholder="Apellido" name="apellido" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="single-input-field">
+                                            <input type="text" placeholder="Numero" name="numero" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="d-flex align-items-center justify-content-around inputs">
+                                            <div class="d-flex">
+                                                <input type="checkbox" name="gato" id="gato">
+                                                <label for="gato">Gato</label>
+                                            </div>
+                                            <div class="d-flex">
+                                                <input type="checkbox" name="perro" id="perro">
+                                                <label for="perro">Perro</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 message-input">
+                                        <div class="single-input-field">
+                                            <textarea placeholder="Mensaje" name="mensaje" cols="40"
+                                                rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="single-input-fieldsbtn">
+                                        <input type="submit" value="Enviar" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-page-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.686925037962!2d-58.4303837!3d-34.6120774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1657433404153!5m2!1ses-419!2sar"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between align-items-center map-modal veni">
+                        <h5 id="exampleModalLabel2">Vení a visitarnos!</h5>
+                        <button type="button" class="btn btn-secondary cruz" data-bs-dismiss="modal">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.686925037962!2d-58.4303837!3d-34.6120774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1657433404153!5m2!1ses-419!2sar"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="d-flex justify-content-around flex-wrap ">
+                <div class="contact-us">
+                    <h4>Contactanos</h4>
+                    <hr>
+                    <div class="phone">
+                        <h5>WhatsApp</h5>
+                        <p class="whatsapp number"><i class="fa-brands fa-whatsapp "></i> +54 9 11 3431-0411</p>
+                    </div>
+                    <div class="phone">
+                        <h5>Teléfono</h5>
+                        <p class="whatsapp number"><i class="fa-solid fa-phone"></i></i> +54 9 11 3431-0411</a>
+                    </div>
+                    <div class="redes d-flex justify-content-between">
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-facebook pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-twitter pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-instagram pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-whatsapp pointer"></i></a>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h4>Newsletter</h4>
+                    <hr>
+                    <form class="d-flex flex-column form-footer" action="">
+                        <input type="text" name="" id="" placeholder="Nombre" required>
+                        <input type="email" name="" id="" placeholder="Correo" required>
+                        <input type="submit" value="Suscríbete!" class="submit">
+                    </form>
+                </div>
+                <div class="medios">
+                    <h4>Medios de pago</h4>
+                    <hr>
+                    <img src="./assets/img/medios-de-pago.png" alt="">
+                </div>
+            </div>
+            <div class="abajo">
+                <div class="d-flex copyright justify-content-between">
+                    <p class="text-center">Veni a nuestra sucursal: <b class="button-map" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">Rio de Janeiro 300 (Caballito)</b></p>
+                    <p class="text-center">© 2022 Cohort 29 • Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/db55518b9d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="main.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+            $("#sidebar").addClass("active");
+        });
+
+        $("#sidebarCollapseX").on("click", function () {
+            $("#sidebar").removeClass("active");
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+            if ($("#sidebar").hasClass("active")) {
+                $(".overlay").addClass("visible");
+
+            }
+        });
+
+        $("#sidebarCollapseX").on("click", function () {
+            $(".overlay").removeClass("visible");
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Farmacia | Pet-Shop</title>
+
+    <link rel="shortcut icon" href="./assets/img/logo-2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.2/css/boxicons.min.css'>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+
+</html>
+
+<body class="juan aparecer">
+    <div id="app" v-cloak >
+
+        {{cantidadTotalEnCarrito}}
+
+        {{verificarContador(productosEnOfertas)}}
+
+
+        <!--Primer Parrafo -->
+        <div class="utility-nav d-none d-md-block ">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12 col-md-6">
+                        <p class="small"><i class="bx bx-envelope"></i> logo@example.com | <i class="bx bx-phone"></i>
+                            +54 9 11 3431-0411
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-md-6 text-right">
+                        <p class="small">Envío gratis en compras de mas de $2000 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <!--Nav-->
+
+            <nav class="navbar navbar-expand-md   main-menu" style="box-shadow:none">
+                <div class="container">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
+                        <i class="bx bx-menu icon-single"></i>
+                    </button>
+
+                    <a class="navbar-brand" href="#">
+                        <img class="logo" src="./assets/img/logo" alt="">
+                    </a>
+
+                    <ul class="navbar-nav d-flex flex-row navbar-nav ml-auto d-md-none align-items-center ">
+                        <li>
+                            <img class="dog-cat" :src=" CatDog.imagen" healt="" @click="estiloCatDog()">
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="btn btn-link text-decoration-none" href="carrito.html"><i
+                                    class="bx bxs-cart icon-single"></i>
+                                <span class="badge badge-danger">{{cantTotalCarro}}</span></a>
+
+                        </li>
+                    </ul>
+
+                    <div class="collapse navbar-collapse">
+                        <div class="form-inline my-2 my-lg-0 mx-auto">
+                            <nav class="navbar navbar-expand-md sub-menu">
+                                <div class="container">
+                                    <div class="collapse navbar-collapse" id="navbar">
+                                        <ul class="navbar-nav mx-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./index.html">Inicio <span
+                                                        class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link active" href="#">Farmacia</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./jugueteria.html">Jugueteria</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <ul class="navbar-nav">
+                            <div class="d-flex align-items-center">
+                                <img class="dog-cat" :src="CatDog.imagen" healt="" @click="estiloCatDog()">
+                            </div>
+                            <li class="nav-item">
+
+                                <a class="btn btn-link text-decoration-none" href="carrito.html"><i
+                                        class="bx bxs-cart icon-single"></i>
+                                    <span class="badge badge-danger">{{cantTotalCarro}}</span></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-2 text-left">
+                                <button type="button" id="sidebarCollapseX" class="btn btn-link">
+                                    <i class="bx bx-x icon-single cruz"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components links">
+                    <li>
+                        <a class="text-decoration-none" href="./index.html"><i class="bx bx-home mr-3"></i>Inicio</a>
+                    </li>
+                    <li class="active">
+                        <a class="text-decoration-none" href="#"><i class="fa-solid fa-stethoscope"></i></i>
+                            Farmacia</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="./jugueteria.html"><i class="fa-solid fa-futbol"></i>
+                            Jugeteria</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none" href="./contacto.html"><i class="fa-solid fa-comment"></i>
+                            Contacto</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <!-- Banner Farmacia -->
+        <section class="container_banner farmacia_banner">
+
+            <div class="container_banner_text container_banner_text_responsive">
+                <h1
+                 class=" animate__animated animate__fadeIn">Farmacia</h1>
+            </div>
+        </section>
+
+        <div class="relleno">
+            <h2>Encontra el producto<br> que estabas buscando!</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eaque.</p>
+        </div>
+
+        <!-- Buscador -->
+        <div class="d-flex  form container">
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="Search" aria-label="Search" id="inputSearch" v-model="inputValue">
+                    {{filtroSearch}}
+                </form>
+            </div>
+            <div class="select">
+                <select v-model="selectValue">
+                    <option disabled value="">Ordenar Por</option>
+                    <option id="mayor">Mayor Precio</option>
+                    <option id="menor">Menor Precio</option>
+                </select>
+
+            </div>
+        </div>
+
+       <!-- producto -->
+<section class="container_product_filter">
+	<div class="container_filter_card">
+		<div class="container">
+			<div class="row">
+                <!-- Si no hay resultados-->
+                <div v-if="inputValue.length!=0 && farmaciaFiltrados.length===0" > 
+                    <div class="error_mensaje">
+                     
+
+                <div class="santi2">
+                    <h1 >NO SE ENCONTRARON RESULTADOS</h1>
+                </div>
+                </div>
+                </div>
+
+                <!-- Comienza el ciclo v-for de los productos -->
+				<div class=" d-flex flex-column align-items-center justify-content-center product-item my-3" v-for="producto in farmaciaFiltrados">
+					<div class="product"> <img v-bind:src="producto.imagen" :alt="producto.nombre">
+						<ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+
+                            <!-- Icono de ver mas(MODAL)-->
+							<li class="icon">
+                                <a data-bs-toggle="modal" data-bs-target="#ejemplo"
+                                @click="verDetalles(producto)" class="fas fa-expand-arrows-alt">
+                            </a>
+                            </li>
+
+                            <!-- Icono de agregar al carrito class="fas fa-shopping-bag" -->
+							<li class="icon" :style="producto.contador<1 ? '' : 'display:none'">
+                                    <a  class="fas fa-shopping-bag"
+                                    @click="agregarAlCarrito(producto,'Su producto se ha agregado')"></a>
+                            </li class="icon">
+                            
+                             <!--Icono para quitar producto -->
+                             <li class="icon" :style="(producto.contador>0 && producto.contador <= producto.stock ) ? '' : 'display:none'" >
+                                <a class="fa fa-minus"
+                                    @click="quitarUnidadProducto(producto,'Su producto se ha eliminado de su carrito')"></a>
+                            </li class="icon">
+
+                               <!-- Icono de agregar producto + y - -->
+                               <li class="icon" :style="(producto.contador>0 && producto.contador< producto.stock ) ? '' : 'display:none'">
+                                <a  class="fa fa-plus"
+                                    @click="agregarAlCarrito(producto,'Su producto se ha agregado')"></a>
+                                </li class="icon">
+
+
+                            <!--Quitar producto del carrio -->
+                            <li class="icon" :style="producto.contador>0 ? '' : 'display:none ' " >
+                                <a class="fa fa-trash "
+                                    @click="quitarDelCarrito(producto,'Su producto se ha eliminado de su carrito')"></a>
+                            </li>
+
+						</ul>
+					</div>
+
+                    <!--Informacion de las cards-->
+                    <div class="contador">
+                        <p :style="producto.contador>0   ? '' : 'display:none'">Productos en carrito: {{producto.contador}}</p>
+                    </div>
+					<div v-if="producto.stock<5" class="tag">Ultimas unidades</div>
+					<div class="title pt-4 pb-1">
+                        <p style="text-align: center;">{{producto.nombre}}</p>
+                    </div>
+                    <div class="price">$ {{producto.precio}}</div>
+
+				</div >
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ejemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="card-title">{{productoModal.nombre}}</p>
+
+                <button type="button" class="btn-close fa fa-times" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+
+                <div class="card my-2 mx-2 align-items-center d-flex flex-wrap" style="width: 18rem">
+                    <img v-bind:src="productoModal.imagen" class="card-img-top" :alt="productoModal.nombre" />
+                    <div class="card-body">
+
+                        <h4 class="card-text card-textfixed" id="">{{productoModal.descripcion}}</h4>
+
+
+                        <p class="card-text card-textfixed">Stock disponible: {{productoModal.stock}}</p>
+                        <p class="card-text card-price">Precio: ${{productoModal.precio}}</p>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- Modal -->
+                <div class="modal-footer d-flex flex-column">
+                    <div class=" d-flex pruebacarrito ">
+                        
+                        <a :style="productoModal.contador<1 ? '' : 'display:none'"
+                            class="btn"
+                            @click="agregarAlCarrito(productoModal,'Su producto se ha agregado')"> <i class="fas fa-shopping-bag"></i> Agregar al carrito </a>
+                            <div class="hola1">
+                        <a :style="(productoModal.contador>0 && productoModal.contador< productoModal.stock ) ? '' : 'display:none'"
+                            class="btn"
+                            @click="agregarAlCarrito(productoModal,'Su producto se ha agregado')"><i class="fa fa-plus"></i> Añadir producto</a>
+
+                        <a :style="(productoModal.contador>0 && productoModal.contador <= productoModal.stock ) ? '' : 'display:none'"
+                            class="btn"
+                            @click="quitarUnidadProducto(productoModal,'Su producto se ha quitado')"><i class="fa fa-minus"></i> Quitar producto</a>
+                        </div>
+
+                        <div :style="productoModal.contador>0   ? '' : 'display:none'">
+                            <p>Productos en carrito: 
+                            {{productoModal.contador}}
+                        </p>
+                        </div>
+                        <br>
+                        <a :style="productoModal.contador>0 ? '' : 'display:none'"
+                            class="btn "
+                            id="trashmodal"
+                            @click="quitarDelCarrito(productoModal,'Su producto se ha quitado')" ><i class="fa fa-trash"></i > Quitar Del
+                            Carrito</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensaje alerta -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <!-- <img src="..." class="rounded me-2" alt="..."> -->
+
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="agregar">
+
+            </div>
+        </div>
+    </div>
+
+    
+      
+
+
+</div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-between align-items-center map-modal veni">
+                        <h5 id="exampleModalLabel2">Vení a visitarnos!</h5>
+                        <button type="button" class="btn btn-secondary cruz" data-bs-dismiss="modal">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.686925037962!2d-58.4303837!3d-34.6120774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses-419!2sar!4v1657433404153!5m2!1ses-419!2sar"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="d-flex justify-content-around flex-wrap ">
+                <div class="contact-us">
+                    <h4>Contactanos</h4>
+                    <hr>
+                    <div class="phone">
+                        <h5>WhatsApp</h5>
+                        <p class="whatsapp number"><i class="fa-brands fa-whatsapp "></i> +54 9 11 3431-0411</p>
+                    </div>
+                    <div class="phone">
+                        <h5>Teléfono</h5>
+                        <p class="whatsapp number"><i class="fa-solid fa-phone"></i></i> +54 9 11 3431-0411</a>
+                    </div>
+                    <div class="redes d-flex justify-content-between">
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-facebook pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-twitter pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-instagram pointer"></i></a>
+                        <a href="" class="text-decoration-none"><i class="fa-brands fa-whatsapp pointer"></i></a>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h4>Newsletter</h4>
+                    <hr>
+                    <form class="d-flex flex-column form-footer" action="">
+                        <input type="text" name="" id="" placeholder="Nombre" required>
+                        <input type="email" name="" id="" placeholder="Correo" required>
+                        <input type="submit" value="Suscríbete!" class="submit">
+                    </form>
+                </div>
+                <div class="medios">
+                    <h4>Medios de pago</h4>
+                    <hr>
+                    <img src="./assets/img/medios-de-pago.png" alt="">
+                </div>
+            </div>
+            <div class="abajo">
+                <div class="d-flex copyright justify-content-between">
+                    <p class="text-center">Veni a nuestra sucursal: <b class="button-map" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">Rio de Janeiro 300 (Caballito)</b></p>
+                    <p class="text-center">© 2022 Cohort 29 • Todos los derechos reservados.</p>
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/db55518b9d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script>
+    $(document).ready(function () {
+        $("#sidebarCollapse").on("click", function () {
+            $("#sidebar").addClass("active");
+        });
+
+        $("#sidebarCollapseX").on("click", function () {
+            $("#sidebar").removeClass("active");
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+            if ($("#sidebar").hasClass("active")) {
+                $(".overlay").addClass("visible");
+
+            }
+        });
+
+        $("#sidebarCollapseX").on("click", function () {
+            $(".overlay").removeClass("visible");
+        });
+    });
+
+</script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="main.js"></script>
+
+</html>
